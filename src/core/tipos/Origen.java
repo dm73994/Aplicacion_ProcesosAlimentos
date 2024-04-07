@@ -1,5 +1,5 @@
 package core.tipos;
 
-public enum Cantidad {
+public enum Origen {
 
 }
