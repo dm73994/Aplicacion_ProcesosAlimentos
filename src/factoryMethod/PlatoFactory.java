@@ -23,10 +23,10 @@ public class PlatoFactory implements Plato{
     protected void seleccionarProteina(Cantidad cantidad){
     }
 
-    protected void seleccionarVerdura(Cantidad cantidad){;
+    protected void seleccionarVerdura(Cantidad cantidad){
     }
 
-    protected void seleccionarGrasaVegetal(Cantidad cantidad){;
+    protected void seleccionarGrasaVegetal(Cantidad cantidad){
     }
 
     void crearPlato(Cantidad cantidadMacro, Cantidad cantidadMicro){
@@ -96,7 +96,7 @@ public class PlatoFactory implements Plato{
         }
         
         return "*************INFORMACIÓN NUTRICIONAL DE SU PLATO*************" +
-                macro.toString() +
-                carbos.toString();
+                macro +
+                carbos;
     }
 }

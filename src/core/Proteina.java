@@ -6,7 +6,7 @@ import core.tipos.TipoNutriente;
 import core.tipos.TipoProteina;
 
 public class Proteina extends Alimento {
-    private String nombre;
+    private final String nombre;
 
     public Proteina(String nombre, Origen origen) {
         super(origen);

@@ -25,7 +25,7 @@ public class PlatoVegetal extends PlatoFactory{
     }
 
     @Override
-    protected void seleccionarVerdura(Cantidad cantidad){;
+    protected void seleccionarVerdura(Cantidad cantidad){
         Alimento alimento = this.selectRandomAlimento("VERDURA", Origen.VEGETAL);
         alimento.calcGramos(cantidad);
 

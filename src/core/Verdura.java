@@ -6,7 +6,7 @@ import core.tipos.TipoNutriente;
 import core.tipos.TipoVerdura;
 
 public class Verdura extends Alimento {
-    private String nombre;
+    private final String nombre;
 
     public Verdura(String nombre) {
         super(Origen.VEGETAL);

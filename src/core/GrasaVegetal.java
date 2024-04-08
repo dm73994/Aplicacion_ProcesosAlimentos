@@ -7,7 +7,7 @@ import core.tipos.TipoNutriente;
 
 public class GrasaVegetal extends Alimento {
 
-    private String nombre;
+    private final String nombre;
 
     public GrasaVegetal(String nombre) {
         super(Origen.VEGETAL);

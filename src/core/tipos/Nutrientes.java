@@ -1,5 +1,5 @@
 package core.tipos;
 
 public interface Nutrientes {
-    public Double calcGramos(Cantidad cantidad);
+    Double calcGramos(Cantidad cantidad);
 }
