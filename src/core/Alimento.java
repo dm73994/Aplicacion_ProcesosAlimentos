@@ -3,26 +3,49 @@ package core;
 import core.tipos.Cantidad;
 import core.tipos.Nutrientes;
 import core.tipos.Origen;
+import core.tipos.TipoNutriente;
 
 public class Alimento implements Nutrientes {
-    private Cantidad cantidad;
-    private Double gramos;
-    private Origen origen;
+    protected Double gramos;
+    protected Origen origen;
+    protected Racion raciones;
+    protected TipoNutriente nutriente;
 
-    public Alimento() {
-        this.cantidad = null;
+    public Alimento(Origen origen) {
         this.gramos = 0.0;
-        this.origen = null;
-    }
-
-    public Alimento(Cantidad cantidad, Double gramos, Origen origen) {
-        this.cantidad = cantidad;
-        this.gramos = gramos;
         this.origen = origen;
     }
 
-    @Override
-    public Double calcGramos() {
-        return 0.0;
+    public Alimento(Racion racion, Origen origen, TipoNutriente nutriente) {
+        this.gramos = 0.0;
+        this.raciones = racion;
+        this.origen = origen;
+        this.nutriente = nutriente;
     }
+
+    public Alimento(Double cantidadBaja, Double cantidadMedia, Double cantidadAlta, Origen origen, TipoNutriente nutriente) {
+        this.gramos = 0.0;
+        this.raciones = new Racion(cantidadBaja, cantidadMedia, cantidadAlta);
+        this.origen = origen;
+        this.nutriente = nutriente;
+    }
+
+    @Override
+    public Double calcGramos(Cantidad cantidad) {
+        switch (cantidad) {
+            case ALTO -> setGramos(this.raciones.getRacionAlta());
+            case BAJO -> setGramos(this.raciones.getRacionBaja());
+            default -> setGramos(this.raciones.getRacionMedia());
+        }
+        return this.gramos;
+    }
+
+    public void setGramos(Double gramos) {
+        this.gramos = gramos;
+    }
+
+    public Origen getOrigen() {
+        return origen;
+    }
+
 }

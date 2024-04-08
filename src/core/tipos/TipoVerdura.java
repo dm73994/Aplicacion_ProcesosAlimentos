@@ -1,5 +1,5 @@
 package core.tipos;
 
-public interface TipoVerdura {
+public enum TipoVerdura {
 
 }

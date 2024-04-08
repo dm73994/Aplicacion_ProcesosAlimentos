@@ -1,5 +1,5 @@
 package core.tipos;
 
-public interface TipoGrasaVegetal {
-
+public enum TipoGrasaVegetal {
+    AGUACATE
 }

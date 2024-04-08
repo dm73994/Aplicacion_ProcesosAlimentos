@@ -1,5 +1,5 @@
 package core.tipos;
 
-public interface TipoProteina {
+public enum TipoProteina {
 
 }
